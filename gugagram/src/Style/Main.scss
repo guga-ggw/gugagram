@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Jost:wght@600&family=Kanit:wght@600&family=Playball&family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+ul{
+    li{
+        font-family: 'Kanit', sans-serif;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 770px) {
+    nav{
+        i{
+            display: none;
+        }
+    }
+}
+
+#Form{
+    input{
+        border-bottom: 2px solid rgb(21,28,72);
+    }
+}
+
+#reg_txt{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+}
