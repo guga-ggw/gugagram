@@ -13,3 +13,9 @@ export const usecreateNewUserMutation = () => {
         mutationFn : (user:INewUser) => createUserAccount(user)
     })
 }
+
+export const useSignUpMutation = () => {
+    return useMutation({
+        
+    })
+}
