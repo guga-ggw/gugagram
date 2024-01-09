@@ -12,6 +12,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@reduxjs/toolkit": "^2.0.1",
+    "@tanstack/react-query": "^5.17.9",
     "appwrite": "^13.0.1",
     "framer-motion": "^10.17.4",
     "hook-form": "^0.0.1",
