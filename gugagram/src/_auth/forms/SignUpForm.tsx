@@ -7,13 +7,15 @@ import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import { z } from 'zod'
 import { INewUser, IUser } from '@/types'
-import { usecreateNewUserMutation } from '@/lib/react-query/queriesandmutations'
+import { useSignUpMutation, usecreateNewUserMutation } from '@/lib/react-query/queriesandmutations'
+import { getCurrentAccount } from '@/lib/appwrite/api'
 
 
 const SignUpForm = () => {
   const {height, width} = useWindowResize()
     const navigate = useNavigate()
     const { mutateAsync:createUserAccount} = usecreateNewUserMutation()
+    const {mutateAsync:SignInAccount} = useSignUpMutation()
 
     type TsignUpSchema = z.infer<typeof SignUpSchema>
 
@@ -50,6 +52,7 @@ const SignUpForm = () => {
       }
     
       createUserAccount(newUser)
+      const session = await SignInAccount({email : data.email, password : data.password})
       navigate('/sign-in')
     };
 

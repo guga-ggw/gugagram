@@ -1,5 +1,5 @@
 import { INewUser } from "@/types"
-import { createUserAccount } from "../appwrite/api"
+import { createUserAccount, signInAccount } from "../appwrite/api"
 
 import {
     useQuery,
@@ -16,6 +16,6 @@ export const usecreateNewUserMutation = () => {
 
 export const useSignUpMutation = () => {
     return useMutation({
-        
+        mutationFn : (user : {email : string, password : string}) => signInAccount(user)
     })
 }
