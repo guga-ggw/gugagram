@@ -22,7 +22,7 @@ const initialState: stateType = {
 export const fetchCurrentAccount = createAsyncThunk(
     "PageSlice/fetchCurrentAccount",
     async () => {
-        const user = await getCurrentAccount();
+        const user = await getCurrentAccount()
         console.log(user)
         return user;
     }
